@@ -13,3 +13,11 @@
 .home-name {
 	@apply text-2xl;
 }
+
+.navStyling {
+	@apply inline-flex items-center px-3 my-6 rounded text-deepChampagne hover:text-eggShell;
+}
+
+.navActive {
+	@apply text-blueGrey bg-terracotta-dark;
+}
