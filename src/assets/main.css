@@ -30743,11 +30743,8 @@ video {
 }
 
 .navStyling {
-  border-radius: 0.25rem;
   display: inline-flex;
   align-items: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   --tw-text-opacity: 1;
@@ -30760,8 +30757,9 @@ video {
 }
 
 .navActive {
-  --tw-bg-opacity: 1;
-  background-color: rgba(237, 93, 53, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(237, 93, 53, var(--tw-border-opacity));
+  border-bottom-width: 4px;
   --tw-text-opacity: 1;
   color: rgba(61, 64, 91, var(--tw-text-opacity));
 }

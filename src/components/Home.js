@@ -10,7 +10,7 @@ export default function Home() {
 				className='absolute object-cover w-full h-full'
 			/>
 			<section className='relative flex justify-center min-h-screen pt-12 lg:pt-64 px-8'>
-				<h1 className='text-6xl text-eggShell font-thin tracking-widest leading-none uppercase lg:leading-snug'>Hi! I'm Alexandra</h1>
+				<h1 className='text-6xl text-eggShell font-thin tracking-widest leading-none uppercase lg:leading-snug'>Alexandra's crochet</h1>
 			</section>
 		</main>
 	);

@@ -15,9 +15,9 @@
 }
 
 .navStyling {
-	@apply inline-flex items-center px-3 my-6 rounded text-deepChampagne hover:text-eggShell;
+	@apply inline-flex items-center px-3 text-deepChampagne hover:text-eggShell;
 }
 
 .navActive {
-	@apply text-blueGrey bg-terracotta-dark;
+	@apply text-blueGrey border-b-4 border-terracotta-dark;
 }
