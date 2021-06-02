@@ -10,14 +10,14 @@ export default function Navbar() {
 					<NavLink to='/' exact activeClassName='navActive' className=' mr-4 text-4xl tracking-widest navStyling font-thin'>
 						AlexFaller
 					</NavLink>
-					<NavLink to='post' activeClassName='navActive' className='navStyling'>
-						Blog Posts
+					<NavLink to='/post' exact activeClassName='navActive' className='navStyling'>
+						Blog
 					</NavLink>
-					<NavLink to='project' activeClassName='navActive' className='navStyling'>
+					<NavLink to='/project' activeClassName='navActive' className='navStyling'>
 						Projects
 					</NavLink>
-					<NavLink to='about' activeClassName='navActive' className='navStyling'>
-						About Me!
+					<NavLink to='/about' activeClassName='navActive' className='navStyling'>
+						About
 					</NavLink>
 				</nav>
 				<div className='inline-flex px-3'>

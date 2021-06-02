@@ -29,10 +29,10 @@ export default function Post() {
 			<section className='container mx-auto'>
 				<h1 className='text-5xl flex justify-center text-eggShell uppercase font-thin'>Blog!</h1>
 				<h2 className='text-lg text-deepChampagne flex justify-center mb-12'>Learn all about crochet in my blog</h2>
-				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+				<section className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
 					{postData &&
 						postData.map((post, index) => (
-							<article>
+							<article key={index}>
 								<Link to={'/post/' + post.slug.current} key={post.slug.current}>
 									<span className='block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-terracotta-dark' key={index}>
 										<img src={post.mainImage.asset.url} alt={post.mainImage.alt} className='w-full h-full rounded-r object-cover absolute' />
@@ -43,7 +43,7 @@ export default function Post() {
 								</Link>
 							</article>
 						))}
-				</div>
+				</section>
 			</section>
 		</main>
 	);

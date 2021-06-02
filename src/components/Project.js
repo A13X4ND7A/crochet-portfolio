@@ -15,6 +15,13 @@ export default function Project() {
 				url,
 				projectType,
 				tags,
+				projectImage[]{
+                    asset->{
+                        _id,
+                        url
+                    },
+                    alt
+                }
             }`
 			)
 			.then((data) => setProjectData(data))
@@ -29,9 +36,14 @@ export default function Project() {
 				<section className='grid grid-cols-2 gap-8'>
 					{projectData &&
 						projectData.map((project, index) => (
-							<article className='relative rounded-lg shadow-xl bg-white p-16'>
-								<h3 className='text-gray-800 text-3xl font-bold mb-2 hover:text-red-700'>{project.title}</h3>
+							<article key={index} className='relative rounded-lg shadow-xl bg-white p-16'>
+								<span className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
+									{project.projectImage.map((item, index) => (
+										<img src={item.asset.url} alt={item.alt} key={index} className=' flex justify-center align-center' />
+									))}
+								</span>
 
+								<h3 className='text-gray-800 text-3xl font-bold mb-2 hover:text-red-700'>{project.title}</h3>
 								<div className='text-gray-500 text-xs space-x-4'>
 									<span>
 										<strong className='font-bold'>Yarn Used: </strong>

@@ -12,6 +12,7 @@ module.exports = {
 				'blueGrey': '#3D405B',
 				'deepChampagne': '#f2cc8f',
 				'eggShell': '#f4f1de',
+				'brown': '#976741',
 			},
 			fontFamily: ['Montserrat'],
 		},
