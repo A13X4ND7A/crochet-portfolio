@@ -46,7 +46,7 @@ export default function SinglePost() {
 							<h1 className='text-3xl lg:text-6xl mb-4'>{singlePost.title}</h1>
 							<div className='flex justify-center text-gray-800'>
 								<img src={urlFor(singlePost.authorImage).url()} alt={singlePost.name} className='w-10 h-10 rounded full' />
-								<p className=' flex items-center pl-2 text-2xl'>{singlePost.name}</p>
+								<p className=' flex items-center pl-2 text-2xl'>{singlePost.authorName}</p>
 							</div>
 						</div>
 					</div>

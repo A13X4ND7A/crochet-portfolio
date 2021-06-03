@@ -30,7 +30,7 @@ export default function About() {
 			<img src={yarnImage} alt='Paul Hanaoka on Unsplash' className='absolute w-full' />
 			<div className='p-16 lg:pt-48 container mx-auto relative'>
 				<section className='bg-terracotta bg-opacity-90 rounded-lg shadow-2xl lg:flex p-20'>
-					<img src={urlForAuthor(author.authorImage).url()} alt={author.name} className='rounded w-32 h-32 lg:w-64 lg:h-64 mr-8' alt='' />
+					<img alt={author.name} src={urlForAuthor(author.authorImage).url()} className='rounded w-32 h-32 lg:w-64 lg:h-64 mr-8' />
 					<div className='text-lg flex flex-col justify-center'>
 						<h1 className='text-6xl text-eggShell mb-4'>
 							Hello. I am <span className='text-blueGrey'>{author.name}</span>
