@@ -39,7 +39,7 @@ export default function Lightbox({passingImages}) {
 		let nextImage = passingImages[index + 1].asset.url;
 		console.log(nextImage);
 		setImageToShow(nextImage);
-		console.log(setImageToShow);
+
 		console.log(imageToShow);
 
 		//if the current index is -1 then there are no more images found and the lightbox should be closed
