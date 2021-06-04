@@ -15,7 +15,9 @@
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "4.0.3",
 		"react-social-icons": "^5.4.0",
-		"web-vitals": "^1.1.2"
+		"web-vitals": "^1.1.2",
+		"autoprefixer": "^10.2.6",
+		"tailwindcss": "^2.1.4"
 	},
 	"scripts": {
 		"start": "npm run watch:css && react-scripts start",
@@ -43,7 +45,7 @@
 			"last 1 safari version"
 		]
 	},
-	"Dependencies": {
+	"devDependencies": {
 		"autoprefixer": "^10.2.6",
 		"postcss-cli": "^8.3.0",
 		"tailwindcss": "^2.1.4"
