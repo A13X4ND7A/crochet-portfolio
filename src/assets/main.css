@@ -543,6 +543,11 @@ video {
   font-family: 'Montserrat';
 }
 
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgba(240, 241, 240, var(--tw-bg-opacity));
+}
+
 .container {
   width: 100%;
 }
@@ -31531,8 +31536,8 @@ video {
   border-radius: 0.25rem;
   display: inline-flex;
   align-items: center;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   --tw-text-opacity: 1;
