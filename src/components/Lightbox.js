@@ -8,12 +8,12 @@ export default function Lightbox({passingImages}) {
 
 	//maps over the images to display
 	const imageCards = passingImages.map((image, index) => (
-		<img src={image.asset.url} alt={image.alt} key={index} className=' flex justify-center align-center w-full' onClick={() => showImage(image.asset.url)} />
+		<img src={image.asset.url} alt={image.alt} key={index} className=' flex justify-center align-center w-full' onClick={() => showImage(image)} />
 	));
 
 	const showImage = (image) => {
 		//set imageToShow to be the one thats clicked on
-		setImageToShow(image);
+		setImageToShow(image.asset.url);
 		//set the lightbox visbaility to true
 		setLightBoxDisplay(true);
 	};
@@ -34,20 +34,13 @@ export default function Lightbox({passingImages}) {
 				return true;
 			}
 		});
-		console.log('the index is.... ' + index);
-		console.log(passingImages);
-		let nextImage = passingImages[index + 1].asset.url;
-		console.log(nextImage);
-		setImageToShow(nextImage);
-
-		console.log(imageToShow);
 
 		//if the current index is -1 then there are no more images found and the lightbox should be closed
 		if (index >= passingImages.length - 1) {
 			setLightBoxDisplay(false);
 		} else {
 			let nextImage = passingImages[index + 1];
-			setImageToShow(nextImage);
+			setImageToShow(nextImage.asset.url);
 		}
 	};
 
