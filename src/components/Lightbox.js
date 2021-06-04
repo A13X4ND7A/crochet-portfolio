@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 
 export default function Lightbox({passingImages}) {
-	//state to hide and show the image thats chosen
 	const [imageToShow, setImageToShow] = useState('');
-	//state to show and hide the lighbox
+	const [altText, setAltText] = useState('');
 	const [lightboxDisplay, setLightBoxDisplay] = useState(false);
 
 	//maps over the images to display
@@ -14,6 +13,7 @@ export default function Lightbox({passingImages}) {
 	const showImage = (image) => {
 		//set imageToShow to be the one thats clicked on
 		setImageToShow(image.asset.url);
+		setAltText(image.alt);
 		//set the lightbox visbaility to true
 		setLightBoxDisplay(true);
 	};
@@ -41,18 +41,24 @@ export default function Lightbox({passingImages}) {
 		} else {
 			let nextImage = passingImages[index + 1];
 			setImageToShow(nextImage.asset.url);
+			setAltText(nextImage.alt);
 		}
 	};
 
 	const showPrevious = (event) => {
 		event.stopPropagation();
 
-		let currentIndex = passingImages.indexOf(imageToShow);
-		if (currentIndex <= 0) {
+		const index = passingImages.findIndex((element, index) => {
+			if (element.asset.url === imageToShow) {
+				return true;
+			}
+		});
+		if (index <= 0) {
 			setLightBoxDisplay(false);
 		} else {
-			let nextImage = passingImages[currentIndex - 1];
-			setImageToShow(nextImage);
+			let nextImage = passingImages[index - 1];
+			setImageToShow(nextImage.asset.url);
+			setAltText(nextImage.alt);
 		}
 	};
 
@@ -66,7 +72,7 @@ export default function Lightbox({passingImages}) {
 						⭠
 					</button>
 
-					<img className='' src={imageToShow} alt={imageToShow}></img>
+					<img className='' src={imageToShow} alt={altText}></img>
 
 					<button className='absolute right-0' onClick={showNext}>
 						⭢
