@@ -51,6 +51,8 @@ export default function Lightbox({passingImages}) {
 		const index = passingImages.findIndex((element, index) => {
 			if (element.asset.url === imageToShow) {
 				return true;
+			} else {
+				return false;
 			}
 		});
 		if (index <= 0) {
