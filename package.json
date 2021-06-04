@@ -42,7 +42,7 @@
 			"last 1 safari version"
 		]
 	},
-	"devDependencies": {
+	"Dependencies": {
 		"autoprefixer": "^10.2.5",
 		"postcss": "^8.3.0",
 		"tailwindcss": "^2.1.2"
