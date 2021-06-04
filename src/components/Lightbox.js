@@ -26,10 +26,12 @@ export default function Lightbox({passingImages}) {
 		event.stopPropagation();
 
 		//get the index of the current image and then add one when next image is clicked to display the next image in the array
-		// eslint-disable-next-line array-callback-return
+
 		const index = passingImages.findIndex((element) => {
 			if (element.asset.url === imageToShow) {
 				return true;
+			} else {
+				return false;
 			}
 		});
 
