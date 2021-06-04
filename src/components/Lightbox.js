@@ -6,9 +6,7 @@ export default function Lightbox({passingImages}) {
 	const [lightboxDisplay, setLightBoxDisplay] = useState(false);
 
 	//maps over the images to display
-	const imageCards = passingImages.map((image, index) => (
-		<img src={image.asset.url} alt={image.alt} key={index} className=' flex justify-center align-center w-full' onClick={() => showImage(image)} />
-	));
+	const imageCards = passingImages.map((image, index) => <img src={image.asset.url} alt={image.alt} key={index} onClick={() => showImage(image)} />);
 
 	const showImage = (image) => {
 		//set imageToShow to be the one thats clicked on
@@ -29,13 +27,13 @@ export default function Lightbox({passingImages}) {
 
 		//get the index of the current image and then add one when next image is clicked to display the next image in the array
 		// eslint-disable-next-line array-callback-return
-		const index = passingImages.findIndex((element, index) => {
+		const index = passingImages.findIndex((element) => {
 			if (element.asset.url === imageToShow) {
 				return true;
 			}
 		});
 
-		//if the current index is -1 then there are no more images found and the lightbox should be closed
+		//if the current index is -1 then there are no more images found and the lightbox should be closed otherwise add one to the index and set the image to the next image in the array
 		if (index >= passingImages.length - 1) {
 			setLightBoxDisplay(false);
 		} else {
@@ -67,7 +65,7 @@ export default function Lightbox({passingImages}) {
 			<div className='grid md:grid-cols-2 gap-2'>{imageCards}</div>
 
 			{lightboxDisplay ? (
-				<div onClick={hideLightBox} className='flex z-10 fixed top-0 left-0 w-full h-full bg-terracotta bg-opacity-50 items-center justify-between'>
+				<div onClick={hideLightBox} className='flex z-10 fixed top-0 left-0 w-full h-full bg-crochetGreen-dark bg-opacity-50 items-center justify-between'>
 					<button className='absolute left-0' onClick={showPrevious}>
 						⭠
 					</button>

@@ -8,6 +8,9 @@
 	@font-face {
 		font-family: 'Montserrat';
 	}
+	body {
+		@apply bg-primary-light;
+	}
 }
 
 .home-name {
@@ -15,9 +18,9 @@
 }
 
 .navStyling {
-	@apply inline-flex items-center px-3 text-deepChampagne hover:text-eggShell;
+	@apply inline-flex items-center px-3 mx-1 text-crochetGreen-dark hover:bg-crochetGreen-light rounded transition ease-in duration-300;
 }
 
 .navActive {
-	@apply text-blueGrey border-b-4 border-terracotta-dark;
+	@apply text-crochetGreen-dark bg-crochetGreen-light rounded;
 }
